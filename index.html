@@ -2,29 +2,41 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Блог о Швейцарии</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Швейцарский блог Русика</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button id="theme-toggle">🌙 Тема</button>
+  <header>
+    <h1>🇨🇭 Привет из Швейцарии!</h1>
+    <button id="themeToggle">🌙 Тема</button>
+  </header>
 
-  <h1>🇨🇭 Привет из Швейцарии!</h1>
-  <p>Это мой блог о жизни в Швейцарии: горы, еда и мечты 🏔️</p>
+  <main>
+    <section>
+      <h2>💰 Стоимость жизни</h2>
+      <ul>
+        <li>🏠 Квартира: от 1000 до 2000 CHF/мес</li>
+        <li>🍞 Еда: около 400–600 CHF/мес</li>
+        <li>🚍 Транспорт: 80–100 CHF/мес</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👨‍💻 Работа</h2>
+      <p>Можно зарабатывать в IT, логистике, доставке или на фрилансе. Например, курьер — от 3000 CHF/мес 💼</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Сайт Русика © 2025</p>
+  </footer>
 
   <script>
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
-
-    // Загрузить тему из localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark');
-    }
-
-    toggle.onclick = () => {
-      body.classList.toggle('dark');
-      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
-    };
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
   </script>
 </body>
 </html>
