@@ -1,59 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Швейцария глазами Русика</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Блог о Швейцарии</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Швейцария глазами Русика</h1>
-    <nav>
-      <a href="#work">Работа</a>
-      <a href="#food">Жильё и еда</a>
-      <a href="#language">Учёба</a>
-      <a href="#plans">Планы</a>
-    </nav>
-  </header>
+  <button id="theme-toggle">🌙 Тема</button>
 
-  <section id="intro">
-    <h2>Почему я хочу в Швейцарию?</h2>
-    <p>Мне 15 лет, и я мечтаю жить в стране Альп, сыра и высоких зарплат. Здесь я собираю всю важную инфу!</p>
-  </section>
+  <h1>🇨🇭 Привет из Швейцарии!</h1>
+  <p>Это мой блог о жизни в Швейцарии: горы, еда и мечты 🏔️</p>
 
-  <section id="work">
-    <h2>Работа в Швейцарии</h2>
-    <p>Зарплаты большие, особенно в IT, строительстве и медицине. Примеры:</p>
-    <ul>
-      <li>IT-специалист — от 5000 CHF</li>
-      <li>Курьер — около 3500 CHF</li>
-      <li>Строитель — 4500 CHF</li>
-    </ul>
-  </section>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-  <section id="food">
-    <h2>Жильё и еда</h2>
-    <p>Примерные цены:</p>
-    <ul>
-      <li>Квартира — 1000–2000 CHF в месяц</li>
-      <li>Йогурт — 1.2 CHF</li>
-      <li>Обед — 15–20 CHF</li>
-    </ul>
-  </section>
+    // Загрузить тему из localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+    }
 
-  <section id="language">
-    <h2>Языки и учёба</h2>
-    <p>Официальные языки: немецкий, французский, итальянский. Для работы — выучи хотя бы один!</p>
-  </section>
-
-  <section id="plans">
-    <h2>Мои планы</h2>
-    <p>Я Русик, мне 15. Хочу выучить фронтенд, сделать портфолио и поехать жить в Швейцарию в 18 лет. Я уже начал с сайта!</p>
-  </section>
-
-  <footer>
-    <p>Сделано Русиком, 2025</p>
-  </footer>
+    toggle.onclick = () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    };
+  </script>
 </body>
 </html>
