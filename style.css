@@ -1,56 +1,31 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c');
+  background-image: url('mountains.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
   transition: 0.5s;
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
+body.dark {
+  background-image: none;
+  background-color: #111;
+  color: #eee;
 }
 
 button {
-  background: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  background-color: #ffffffaa;
+  color: #000;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px;
+  border-radius: 8px;
 }
 
-main {
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 700px;
-  border-radius: 10px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-li {
-  margin: 8px 0;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-body.dark {
-  background-image: url('https://images.unsplash.com/photo-1526483360782-4823e1f7e0f0');
-  color: #eee;
+body.dark button {
+  background-color: #333;
+  color: #fff;
 }
